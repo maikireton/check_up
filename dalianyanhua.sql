@@ -4,7 +4,7 @@ Source Host: localhost
 Source Database: dalianyanhua
 Target Host: localhost
 Target Database: dalianyanhua
-Date: 2014/3/26 0:01:01
+Date: 2014/3/26 22:46:28
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -86,6 +86,17 @@ CREATE TABLE `tj_suit_waike` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=gb2312;
 
 -- ----------------------------
+-- Table structure for tj_yuyue
+-- ----------------------------
+CREATE TABLE `tj_yuyue` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `peopleid` int(11) NOT NULL,
+  `suitid` int(11) NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=gb2312;
+
+-- ----------------------------
 -- Table structure for ys_people
 -- ----------------------------
 CREATE TABLE `ys_people` (
@@ -118,3 +129,4 @@ INSERT INTO `tj_result_neike` VALUES ('1', '0', '1', '1');
 INSERT INTO `tj_suit` VALUES ('8', '123', '2014-03-24 21:32:45');
 INSERT INTO `tj_suit_neike` VALUES ('2', '8', '1');
 INSERT INTO `tj_suit_waike` VALUES ('2', '8', '1');
+INSERT INTO `tj_yuyue` VALUES ('2', '1', '1', '2014-03-26');

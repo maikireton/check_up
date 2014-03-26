@@ -101,6 +101,8 @@
     </Compile>
     <Compile Include="check_up_db.cs" />
     <Compile Include="CheckUpReportData.cs" />
+    <Compile Include="DBKeShi.cs" />
+    <Compile Include="DBYuYue.cs" />
     <Compile Include="ProfileInit.cs" />
     <Compile Include="GlobalDefine.cs" />
     <Compile Include="MainWindow.xaml.cs">

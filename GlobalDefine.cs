@@ -5,6 +5,14 @@ using System.Text;
 
 namespace check_up02
 {
+    struct TJ_YUYUE
+    {
+        public int mID;
+        public int mPeopleID;
+        public int mSuitID;
+        public DateTime mDate;
+    }
+
     struct TJ_PEOPLE
     {
         public int mID;

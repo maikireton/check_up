@@ -15,7 +15,7 @@ namespace check_up02
         /// 获得连接
         /// </summary>
         /// <returns></returns>
-        private static MySqlConnection GetDbConn()
+        public static MySqlConnection GetDbConn()
         {
             MySqlConnection conn = new MySqlConnection("server=localhost;user=root;database=dalianyanhua;port=3306;password=8882210;");
             try

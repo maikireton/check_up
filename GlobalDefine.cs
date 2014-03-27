@@ -13,6 +13,19 @@ namespace check_up02
         public DateTime mDate;
     }
 
+    struct TJ_KESHI
+    {
+        public int mID;
+        public string mName;
+    }
+
+    struct TJ_XIANGMU
+    {
+        public int mID;
+        public string mName;
+        public string mType;
+    }
+
     struct TJ_PEOPLE
     {
         public int mID;
@@ -29,8 +42,8 @@ namespace check_up02
         public int mID;
         public string mName;
         public string mDate;
-        public TJ_SUIT_WAIKE mWaiKe;
-        public TJ_SUIT_NEIKE mNeiKe;
+        public string mSuitString;//从小到大1,2,3
+        public List<TJ_XIANGMU> mListXiangMu;
     }
 
     struct TJ_SUIT_NEIKE

@@ -101,6 +101,7 @@
     </Compile>
     <Compile Include="check_up_db.cs" />
     <Compile Include="CheckUpReportData.cs" />
+    <Compile Include="DBXiangMu.cs" />
     <Compile Include="DBResult.cs" />
     <Compile Include="DBSuit.cs" />
     <Compile Include="DBPeople.cs" />

@@ -15,6 +15,22 @@ namespace check_up02
         /// <param name="result"></param>
         /// <returns></returns>
 
+        public static void CreateResultTable(string name, string[] col)
+        {
+            string sql = "create table " + name;
+            sql += "(id int(11) NOT NULL AUTO_INCREMENT";
+            for (int i = 0; i < col.Length; i++)
+            {
+                sql += ", xiangmu_" + col[i] + " char(20) NOT NULL default ''";
+            }
+            sql += ",resultid int(11) NOT NULL, PRIMARY KEY (id))";
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = check_up_db.GetDbConn();
+            cmd.CommandText = sql;
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
+        }
+
         private static void GetResultWaiKe(int resultID, ref TJ_RESULT_WAIKE waike)
         {
             MySqlCommand cmd = new MySqlCommand();

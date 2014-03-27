@@ -9,7 +9,7 @@ namespace check_up02
 {
     class DBYuYue
     {
-        public static List<TJ_YUYUE> GetYuYue()
+        public static List<TJ_YUYUE> GetYuYues()
         {
             List<TJ_YUYUE> listYuYue = new List<TJ_YUYUE>();
             MySqlCommand cmd = new MySqlCommand();

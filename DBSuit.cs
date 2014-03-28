@@ -17,7 +17,7 @@ namespace check_up02
             cmd.Parameters.AddWithValue("name", suit.mName);
             cmd.Parameters.AddWithValue("suitstring", suit.mSuitString);
             cmd.ExecuteNonQuery();
-            DBResult.CreateResultTable(string.Format("suit_{0:G}", check_up_db.GetLastID(cmd)), suit.mSuitString.Split(','));
+            DBResult.CreateResultTable(check_up_db.GetLastID(cmd), suit.mSuitString.Split(','));
             cmd.Connection.Close();
         }
 

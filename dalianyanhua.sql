@@ -4,7 +4,7 @@ Source Host: localhost
 Source Database: dalianyanhua
 Target Host: localhost
 Target Database: dalianyanhua
-Date: 2014/3/26 22:46:28
+Date: 2014/3/29 1:12:59
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,56 +34,25 @@ CREATE TABLE `tj_result` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=gb2312;
 
 -- ----------------------------
--- Table structure for tj_result_neike
--- ----------------------------
-CREATE TABLE `tj_result_neike` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `resultid` int(11) NOT NULL,
-  `xueya` char(11) NOT NULL,
-  `xinlv` char(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=gb2312;
-
--- ----------------------------
--- Table structure for tj_result_waike
--- ----------------------------
-CREATE TABLE `tj_result_waike` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `suitid` int(11) NOT NULL,
-  `height` int(4) NOT NULL,
-  `weight` int(4) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=gb2312;
-
--- ----------------------------
 -- Table structure for tj_suit
 -- ----------------------------
 CREATE TABLE `tj_suit` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` char(20) NOT NULL DEFAULT '',
+  `name` char(20) NOT NULL,
+  `suitstring` char(100) NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=gb2312;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=gb2312;
 
 -- ----------------------------
--- Table structure for tj_suit_neike
+-- Table structure for tj_xiangmu
 -- ----------------------------
-CREATE TABLE `tj_suit_neike` (
+CREATE TABLE `tj_xiangmu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `suitid` int(11) NOT NULL,
-  `xueya` tinyint(4) NOT NULL,
+  `name` char(20) NOT NULL,
+  `type` char(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=gb2312;
-
--- ----------------------------
--- Table structure for tj_suit_waike
--- ----------------------------
-CREATE TABLE `tj_suit_waike` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `suitid` int(11) NOT NULL,
-  `height` tinyint(4) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=gb2312;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=gb2312;
 
 -- ----------------------------
 -- Table structure for tj_yuyue
@@ -108,9 +77,10 @@ CREATE TABLE `ys_people` (
 -- Table structure for yy_keshi
 -- ----------------------------
 CREATE TABLE `yy_keshi` (
-  `id` int(11) NOT NULL DEFAULT '0',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` char(20) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=gb2312;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=gb2312;
 
 -- ----------------------------
 -- Records 
@@ -125,8 +95,10 @@ INSERT INTO `tj_people` VALUES ('7', 'a', '男', '12', '123123', 'sfdsf', 'sfdsf
 INSERT INTO `tj_people` VALUES ('8', 'a', '男', '12', '123123', 'sfdsf', 'sfdsf');
 INSERT INTO `tj_people` VALUES ('9', 'a', '男', '12', '123123', 'sfdsf', 'sfdsf');
 INSERT INTO `tj_result` VALUES ('1', '1', '0', '2014-03-23');
-INSERT INTO `tj_result_neike` VALUES ('1', '0', '1', '1');
-INSERT INTO `tj_suit` VALUES ('8', '123', '2014-03-24 21:32:45');
-INSERT INTO `tj_suit_neike` VALUES ('2', '8', '1');
-INSERT INTO `tj_suit_waike` VALUES ('2', '8', '1');
+INSERT INTO `tj_suit` VALUES ('3', '123', '1,2', '2014-03-29 00:36:50');
+INSERT INTO `tj_xiangmu` VALUES ('1', '身高', '常规检查');
+INSERT INTO `tj_xiangmu` VALUES ('2', '体重', '常规检查');
+INSERT INTO `tj_xiangmu` VALUES ('3', '11', '22');
 INSERT INTO `tj_yuyue` VALUES ('2', '1', '1', '2014-03-26');
+INSERT INTO `yy_keshi` VALUES ('1', '内科');
+INSERT INTO `yy_keshi` VALUES ('2', '外科');
